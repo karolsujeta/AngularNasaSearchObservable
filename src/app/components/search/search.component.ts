@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchserviceService } from '../searchservice.service';
-import { Data } from '../nasa-data';
+import { SearchserviceService } from '../../service/searchservice.service';
+import { Data } from '../../service/nasa-data';
 import { Observable } from 'rxjs';
 
 @Component({
