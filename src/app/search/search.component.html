@@ -1,0 +1,14 @@
+<div class="main">
+    <p>search works!</p>
+
+    <div class="input-results">
+        <h3>Wyniki dla wyszukiwania "sun"</h3>
+    </div>
+
+    <div class="search-results" *ngFor="let data of (datas | async)">
+        {{data.url}} - {{data.status}}
+    </div>
+
+    <button (click)="showResults()">Pokaż wynik przeszukiwania!</button>
+
+</div>
