@@ -1,3 +1,65 @@
 .main{
+    height: 50vh;
     text-align: center;
+    background: linear-gradient(
+        #1d69b1b7,
+        #ffffffe8),
+        url(https://spacenews.com/wp-content/uploads/2018/10/crewdragon-docking-879x485.jpg);
+    background-size: cover;
+    background-position: center;
+
+    animation-name: moveInBottom;
+    animation-duration: 2s;
+}
+
+.btn{
+    padding: 35px 60px;
+    border-radius: 150px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-animated{
+    animation-name: moveToRight;
+    animation-duration: 0.5s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+.btn:hover{
+    box-shadow: 5px 5px 40px #d8d8d8;
+    transition-duration: 0.35s;
+}
+
+.text-box{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100%{
+        opacity: 1;
+        tranform:translate(0);
+    }
+}
+
+@keyframes moveToRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100%{
+        opacity: 1;
+        tranform:translate(0);
+    }
 }

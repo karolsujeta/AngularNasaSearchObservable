@@ -1,4 +1,4 @@
 export class Data {
-    url: string;
-    status: string;
+    items: string;
+    href:string;
 }

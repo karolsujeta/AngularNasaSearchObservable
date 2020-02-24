@@ -1,14 +1,12 @@
-<div class="main">
-    <p>search works!</p>
+<header class="main">
 
-    <div class="input-results">
-        <h3>Wyniki dla wyszukiwania "sun"</h3>
+    <div class="text-box">
+
+        <div class="search-results" *ngFor="let data of (datas | async)">
+            <p>{{data.items}} - {{data.href}}</p>
+        </div>
+
+        <button class="btn btn-animated" (click)="showResults()">Pokaż wynik przeszukiwania! (w konsoli)</button>
     </div>
 
-    <div class="search-results" *ngFor="let data of (datas | async)">
-        {{data.url}} - {{data.status}}
-    </div>
-
-    <button (click)="showResults()">Pokaż wynik przeszukiwania! (w konsoli)</button>
-
-</div>
+</header>
