@@ -1,4 +1,5 @@
 export class Data {
-    items: string;
-    href:string;
+    constructor(
+        public items: string,
+        public href: string) { }
 }

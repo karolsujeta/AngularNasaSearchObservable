@@ -11,16 +11,20 @@ import { Observable } from 'rxjs';
 export class SearchComponent implements OnInit {
 
   constructor(private searchservice: SearchserviceService) { }
-  datas$: Data[];
+  datas: Data[];
 
   ngOnInit() {
     //console.log(term)
     return this.searchservice.getData()
-      .subscribe(data => this.datas$ = data);
   }
 
-  showResults(){
-    console.log(this.datas$);
+  showResults() {
+    this.searchservice
+      .getData()
+      .subscribe((data: any) => {
+        console.log(data);
+        this.datas = data.data;
+      });
   }
 
 }
